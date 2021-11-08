@@ -13,6 +13,6 @@ Workflow as below:
 Type in how many pages you want to scan > scan page > Wait 5s > scan page > (until all 5 pages has been scanned) > type output file directory > complete
 ```
 
-## How to use it?
-1. Install ImageMagick.
-2. Run this script.
+## External softwares used
+ - wia-cmd-scanner by @nagimov
+ - ImageMagick
