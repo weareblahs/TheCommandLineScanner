@@ -26,3 +26,6 @@ Scan to PNG (until scan complete) > Use ImageMagick to convert / package PNG fil
 
 ### How to change settings?
 See `config.ini` to change settings.
+
+## Other alternatives that I recommend
+**NAPS2 (Not Another PDF Scanner 2)** - This one is technically a "GUI" version of this software, which it acts like the same thing used on this software. Plus, it also have TWAIN support, save to image support and OCR. Highly recommended if you want to get a graphical user interface for scanning. Download it on https://github.com/cyanfish/naps2/releases.
