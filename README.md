@@ -1,6 +1,3 @@
-# SCRIPT IN PROGRESS
-And yes, the script has not been written yet.
-
 # TheCommandLineScanner
 Scan pages into PDF to help minimizing your scanning jobs. Uses ImageMagick and wia-cmd-scanner.
 
@@ -16,3 +13,10 @@ Type in how many pages you want to scan > scan page > Wait 5s > scan page > (unt
 ## External softwares used
  - wia-cmd-scanner by @nagimov
  - ImageMagick
+
+## How to use this?
+### First-time setup
+1. Install ImageMagick from https://imagemagick.org/script/download.php. If you don't know how to set it up, then run `installimagemagick.bat` after downloading the ZIP file from Releases.
+2. Run `scanner.bat`.
+   - Or, you can open CMD, point to the directory, then type scanner.
+3. Follow the steps at the batch file to scan.
