@@ -14,6 +14,9 @@ Type in how many pages you want to scan > scan page > Wait 5s > scan page > (unt
  - wia-cmd-scanner by @nagimov
  - ImageMagick
 
+## What you need
+ - Scanner compatible with WIA
+
 ## How to use this?
 ### First-time setup
 1. Install ImageMagick from https://imagemagick.org/script/download.php. If you don't know how to set it up, then run `installimagemagick.bat` after downloading the ZIP file from Releases.
@@ -22,16 +25,4 @@ Type in how many pages you want to scan > scan page > Wait 5s > scan page > (unt
 3. Follow the steps at the batch file to scan.
 
 ### How to change settings?
-Open `scanner.bat` then modify this line:
-```batch
-wia-cmd-scanner /w 0 /h 0 /dpi 300 /color BW /format PNG /output "scans\%date:~4,2%%date:~7,2%%date:~10,4%%time:~0,2%%time:~3,2%%time:~6,2%.png" >nul
-```
-`/w`: Width.  
-`/h`: Height.  
- - If used `/w 0 /h 0`, that means that it will scan the entire printer / scanner's scan size.
-`/color`: Select color options for scanning. Available options:
- - `BW`: Black and White (default)
- - `GRAY`: Grayscale
- - `RGB`: Full color
-`/format`: Output image format before it repackages to PDF.
- - Available formats are BMP, PNG, GIF, JPG and TIF.
+See `config.ini` to change settings.
