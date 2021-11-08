@@ -20,3 +20,18 @@ Type in how many pages you want to scan > scan page > Wait 5s > scan page > (unt
 2. Run `scanner.bat`.
    - Or, you can open CMD, point to the directory, then type scanner.
 3. Follow the steps at the batch file to scan.
+
+### How to change settings?
+Open `scanner.bat` then modify this line:
+```batch
+wia-cmd-scanner /w 0 /h 0 /dpi 300 /color BW /format PNG /output "scans\%date:~4,2%%date:~7,2%%date:~10,4%%time:~0,2%%time:~3,2%%time:~6,2%.png" >nul
+```
+`/w`: Width.  
+`/h`: Height.  
+ - If used `/w 0 /h 0`, that means that it will scan the entire printer / scanner's scan size.
+`/color`: Select color options for scanning. Available options:
+ - `BW`: Black and White (default)
+ - `GRAY`: Grayscale
+ - `RGB`: Full color
+`/format`: Output image format before it repackages to PDF.
+ - Available formats are BMP, PNG, GIF, JPG and TIF.
