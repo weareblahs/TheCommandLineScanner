@@ -32,6 +32,7 @@ cls
 goto start
 
 :start
+cls
 echo Scanning page...
 wia-cmd-scanner /w %width% /h %height% /dpi %dpi% /color %color% /format %fmt% /output "temp\%date:~4,2%%date:~7,2%%date:~10,4%%time:~0,2%%time:~3,2%%time:~6,2%.png" >nul
 echo Please wait until the scanner finalizes scanning...
@@ -76,14 +77,15 @@ echo Scanning complete!
 set /p pdf=Type the PDF location / filename without the PDF file extension. The file will be saved in your selected directory at the config.ini file.: 
 cls
 echo Saving...
-magick temp\*.png "%ScannerPDFDir%\%pdf%.pdf"
+magick temp\*.png "%ScannerPDFDir%%pdf%.pdf"
 echo Export to PDF complete!
 echo Press any key to exit.
 pause >nul
 echo Deleting temp files...
-cd scans >nul
-del *.png >nul
-del *.bmp >nul
-del *.tif >nul
-del *.tiff >nul
-del *.jpg >nul
+cd temp >nul
+del /S *.jpg
+del /S *.png
+del /S *.gif
+del /S *.tif
+del /S *.jpg
+cd .. >nul
